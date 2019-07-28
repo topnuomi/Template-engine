@@ -6,14 +6,14 @@
 </head>
 <body>
 
-    <?php  foreach ($array as $vo):   echo $vo;  endforeach; ?>
+    <?php  foreach ($array as $vo):   echo ($vo);  endforeach; ?>
     将上面的内容放入raw标签：
     
         <volist name="array" id="vo">
             {$vo}
         </volist>
     
-    <?php if ($var == 1):  echo time();  endif; ?>
+    <?php echo ($a);  if ($var == 1):  echo (time());  if ($var1 == 2):  echo (time());  endif;  endif; ?>
     扩展的标签：
     <?php echo 'Hello'; ?>
 

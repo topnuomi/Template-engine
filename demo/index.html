@@ -12,8 +12,12 @@
             {$vo}
         </volist>
     </raw>
+    {$a}
     <if condition="$var == 1">
         {:time()}
+        <if condition="$var1 == 2">
+            {:time()}
+        </if>
     </if>
     扩展的标签：
     <say what="Hello" />

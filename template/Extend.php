@@ -2,13 +2,13 @@
 
 namespace template;
 
-class Extend extends Engine
+class Extend
 {
-    protected $tags = [
+    public $tags = [
         'say' => ['attr' => 'what', 'close' => 0]
     ];
-    
-    protected function _say_start($tag)
+
+    public function _say($tag)
     {
         return '<?php echo \''. $tag['what'] .'\'; ?>';
     }
