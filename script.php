@@ -1,12 +1,12 @@
 <?php
-require 'template/Engine.php';
-require 'template/Extend.php';
+require 'engine/Engine.php';
+require 'engine/Extend.php';
 
 $content = file_get_contents('./demo/index.html');
 $t1 = microtime(true);
-$template = \template\Engine::instance();
+$template = \engine\Engine::instance();
 // 加载自定义标签库
-$template->loadTaglib(\template\Extend::class);
+$template->loadTaglib(\engine\Extend::class);
 // 编译
 $result = $template->compile($content);
 // 最后还原raw标签

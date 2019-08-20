@@ -1,6 +1,6 @@
 <?php
 
-namespace template;
+namespace engine;
 
 class Extend
 {
