@@ -1,0 +1,30 @@
+<extend file="base"/>
+
+<block name="title">Document</block>
+
+<block name="body">
+    <loop from="array" to="vo" index="key" key="i">
+        {$vo}
+    </loop>
+    将上面的内容放入raw标签：
+    <original>
+        <loop from="array" to="vo">
+            {$vo}
+        </loop>
+    </original>
+    <assign name="a" value="张三"/>
+    {123456|md5}
+    {$a|mb_substr=0,1}
+    <if condition="$var eq 1">
+        {:time()}
+        <if condition="$var1 eq 2">
+            {:time()}
+        </if>
+    </if>
+    扩展的标签：
+    <article:list category-id="$cate.id"/>
+</block>
+
+<block name="footer">
+    FOOTER
+</block>
